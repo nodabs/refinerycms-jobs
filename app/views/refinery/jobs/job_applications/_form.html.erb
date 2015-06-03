@@ -1,12 +1,12 @@
 <%= form_for [refinery, :jobs, @job, @job_application], :html => { :multipart => true } do |f| %>
 
-  <h2><%= t('.job_application_for_position', job_title: @job.title) %></h2>
+  <h2><%= t('.job_application_for_position') %></h2>
 
   <%= render '/refinery/admin/error_messages', {:object => @job_application, :include_object_name => true} %>
 
-  <div class='field'>
-    <%= f.required_label :name %>
-    <%= f.text_field :name, :class => 'text', :required => 'required' %>
+  <div class="form-group">
+	<%= f.required_label :name %>
+	<%= f.text_field :name, :class => 'form-control', :required => 'required' %>
   </div>
 
   <div class='field'>
@@ -33,6 +33,7 @@
     <p class="instruction">
       <%= t('.mandatory_fields').html_safe %>
     </p>
-    <%= f.submit t('.apply') %>
+    <%= f.submit t('.apply'), :class => 'btn btn-default' %>
   </div>
+
 <% end %>

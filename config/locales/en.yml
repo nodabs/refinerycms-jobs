@@ -54,7 +54,7 @@ en:
           current_open_positions: Current open positions
       job_applications:
         form:
-          job_application_for_position: Apply Online as %{job_title}
+          job_application_for_position: Apply Online
           apply: Apply
           mandatory_fields: <sup>*</sup> fields are required.
         show:
