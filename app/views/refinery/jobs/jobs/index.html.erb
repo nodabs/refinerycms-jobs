@@ -21,6 +21,7 @@
 			<%= raw(@page.content_for(:body)) %>
 		</div>
 		<div class="side-bar col-md-4">
+			<%= raw(@page.content_for(:side_body)) %>
 			<% if @jobs.any? %>
 			  <section>
 			    <ul id="jobs">
