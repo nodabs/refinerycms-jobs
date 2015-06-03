@@ -14,4 +14,32 @@
   <% end %>
 <% end %>
 
-<%= render :partial => "/refinery/content_page" %>
+<% if !@page.images.blank? %>
+
+<div id="home-slides" class="carousel slide">
+	<div class="carousel-inner">	
+		<% @page.images.each_with_index do |image, index| %>
+			<div class='item <%= index == 0 ? "active" : "" %>'>
+				<%= image_tag(image.url, :class => "img-responsive center-block") %>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<div class="page-break">&nbsp;</div>
+
+<% end %>
+
+<div class="container main-content">
+	<div class="page-title"><%= raw(@page.title) %></div>
+	<div class="row">
+		<div class="col-md-8">
+			<%= raw(@page.content_for(:body)) %>
+		</div>
+		<div class="side-bar col-md-4">
+			<%= raw(@page.content_for(:side_body)) %>
+		</div>
+	</div>
+</div>
+
+<%= render '/refinery/draft_page_message' if @page && @page.draft? -%>
