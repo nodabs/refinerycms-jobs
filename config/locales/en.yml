@@ -36,7 +36,7 @@ en:
         show:
           fill: Number of positions to fill
           ref: Reference number
-          description: Description
+          description: Job Description
           requirements_and_work_conditions: Requirements and work conditions
           education: Education
           experience: Years related to the job experience
