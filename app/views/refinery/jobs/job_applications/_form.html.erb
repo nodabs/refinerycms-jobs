@@ -9,24 +9,24 @@
 	<%= f.text_field :name, :class => 'form-control', :required => 'required' %>
   </div>
 
-  <div class='field'>
+  <div class='form-group'>
     <%= f.required_label :email %>
-    <%= f.email_field :email, :class => 'text', :required => 'required' %>
+    <%= f.email_field :email, :class => 'form-control', :required => 'required' %>
   </div>
 
-  <div class='field'>
+  <div class='form-group'>
     <%= f.required_label :phone %>
-    <%= f.telephone_field :phone, :class => 'text', :required => 'required' %>
+    <%= f.telephone_field :phone, :class => 'form-control', :required => 'required' %>
   </div>
 
-  <div class='field'>
+  <div class='form-group'>
     <%= f.required_label :cover_letter %>
-    <%= f.text_area :cover_letter, :class => 'text', :required => 'required' %>
+    <%= f.text_area :cover_letter, :class => 'form-control', :required => 'required' %>
   </div>
 
-  <div class='field message_field'>
+  <div class='form-group'>
     <%= f.required_label :resume %>
-    <%= f.file_field :resume, :class => 'text', :required => 'required' %>
+    <%= f.file_field :resume, :class => 'form-control', :required => 'required' %>
   </div>
 
   <div class="actions">
