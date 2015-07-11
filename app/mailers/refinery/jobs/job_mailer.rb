@@ -6,7 +6,7 @@ module Refinery
         @job_application, @request = job_application, request
         mail :subject   => Refinery::Jobs::Setting.confirmation_subject(Globalize.locale),
              :to        => job_application.email,
-             :from      => from_info,
+             :from      => "\"#{Refinery::Core.site_name}\" <do-not-reply@paweblabs.com>",
              :reply_to  => Refinery::Jobs::Setting.notification_recipients.split(',').first
       end
 
@@ -15,7 +15,7 @@ module Refinery
         @host                      = [request.protocol, request.host_with_port].join
         mail :subject   => Refinery::Jobs::Setting.notification_subject,
              :to        => Refinery::Jobs::Setting.notification_recipients,
-             :from      => from_info,
+             :from      => "\"#{Refinery::Core.site_name}\" <do-not-reply@paweblabs.com>",
              :reply_to  => job_application.email
       end
 
